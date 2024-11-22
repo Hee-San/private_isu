@@ -1,0 +1,26 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/isucon/private_isu/webapp/ruby/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+App	app.rb	/^  class App < Sinatra::Base$/;"	c	module:Isuconp
+Isuconp	app.rb	/^module Isuconp$/;"	m
+POSTS_PER_PAGE	app.rb	/^    POSTS_PER_PAGE = 20$/;"	C	class:Isuconp.App
+UPLOAD_LIMIT	app.rb	/^    UPLOAD_LIMIT = 10 * 1024 * 1024 # 10mb$/;"	C	class:Isuconp.App
+calculate_passhash	app.rb	/^      def calculate_passhash(account_name, password)$/;"	S	class:Isuconp.App
+calculate_salt	app.rb	/^      def calculate_salt(account_name)$/;"	S	class:Isuconp.App
+config	app.rb	/^      def config$/;"	S	class:Isuconp.App
+db	app.rb	/^      def db$/;"	S	class:Isuconp.App
+db_initialize	app.rb	/^      def db_initialize$/;"	S	class:Isuconp.App
+digest	app.rb	/^      def digest(src)$/;"	S	class:Isuconp.App
+get_session_user	app.rb	/^      def get_session_user()$/;"	S	class:Isuconp.App
+image_url	app.rb	/^      def image_url(post)$/;"	S	class:Isuconp.App
+make_posts	app.rb	/^      def make_posts(results, all_comments: false)$/;"	S	class:Isuconp.App
+try_login	app.rb	/^      def try_login(account_name, password)$/;"	S	class:Isuconp.App
+validate_user	app.rb	/^      def validate_user(account_name, password)$/;"	S	class:Isuconp.App
