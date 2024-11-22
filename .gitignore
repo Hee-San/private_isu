@@ -16,3 +16,8 @@ portal/tmp
 !/portal/log/.keep
 /portal/tmp
 .vagrant
+benchmarker/
+webapp/node/
+webapp/php/
+LICENSE
+webapp/docker-compose.yml
