@@ -175,17 +175,20 @@ func makePosts(results []Post, csrfToken string, allComments bool) ([]Post, erro
 	var posts []Post
 
 	for _, p := range results {
-		err := db.Get(&p.CommentCount, "SELECT COUNT(*) AS `count` FROM `comments` WHERE `post_id` = ?", p.ID)
-		if err != nil {
-			return nil, err
-		}
+		// post_idのcommentsの件数を取得
+		// DONE: countsの配列から数を取得する
+		// err := db.Get(&p.CommentCount, "SELECT COUNT(*) AS `count` FROM `comments` WHERE `post_id` = ?", p.ID)
+		// if err != nil {
+		// 	return nil, err
+		// }
 
 		query := "SELECT * FROM `comments` WHERE `post_id` = ? ORDER BY `created_at` DESC"
 		if !allComments {
 			query += " LIMIT 3"
 		}
 		var comments []Comment
-		err = db.Select(&comments, query, p.ID)
+
+		err := db.Select(&comments, query, p.ID)
 		if err != nil {
 			return nil, err
 		}
@@ -203,6 +206,7 @@ func makePosts(results []Post, csrfToken string, allComments bool) ([]Post, erro
 		}
 
 		p.Comments = comments
+		p.CommentCount = len(comments)
 
 		err = db.Get(&p.User, "SELECT * FROM `users` WHERE `id` = ?", p.UserID)
 		if err != nil {
